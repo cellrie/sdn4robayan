@@ -1,0 +1,548 @@
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* ================= MAIN CARD ================= */
+  .main-card {
+    position: relative;
+    margin-top: -80px; /* atau sesuaikan dengan kebutuhan */
+    z-index: 2;
+    padding-bottom: 40px
+  }
+
+  .main-card .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .main-card .card {
+    width: 100%;
+    max-width: 280px;
+    background-color: #a5c9ff;
+    color: #0d1b2a;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .main-card .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .main-card .card h4 {
+    font-size: 16px;
+    color: #1b3d75;
+    margin-top: 10px;
+  }
+
+  .main-card .card p {
+    font-size: 14px;
+  }
+
+  /* ================= SAMBUTAN ================= */
+  .sambutan {
+    margin-top: 120px;
+    padding: 100px 0;
+    scroll-margin-top: 80px;
+  }
+
+  .sambutan .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .sambutan-img {
+    flex: 1;
+    text-align: center;
+  }
+
+  .sambutan-img img {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    width: auto;
+  }
+
+  .sambutan-about {
+    flex: 1;
+    margin-left: -100px;
+  }
+
+  .sambutan-about h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 15px;
+  }
+
+  .sambutan-about h1:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 3px;
+    background: #5777ba;
+  }
+
+  .sambutan-about p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+  }
+
+  .selengkapnya-btn {
+    display: inline-block;
+    background: #5777ba;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .selengkapnya-btn:hover {
+    background: #4562a0;
+    transform: translateY(-2px);
+  }
+
+  /* ================= KEGIATAN ================= */
+  .kegiatan {
+    padding: 80px 0;
+    text-align: center;
+  }
+
+  .kegiatan .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kegiatan.horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 30px;
+  }
+
+  .kegiatan-item {
+    width: 100%;
+    max-width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+
+  .kegiatan-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .kegiatan-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .kegiatan-item .caption {
+    padding: 10px;
+    font-weight: 500;
+    font-size: 14px;
+    color: #333;
+  }
+
+  /* Responsive Mobile */
+  @media (max-width: 576px) {
+    .main-card {
+      padding-bottom: 60px; /* beri ruang tambahan */
+    }
+
+    .main-card .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .main-card .card {
+      width: 90%;
+      margin-bottom: 10px;
+    }
+
+    .kegiatan.horizontal {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .kegiatan-item {
+      max-width: 90%;
+    }
+
+    .kegiatan-item img {
+      height: 180px;
+    }
+  }
+
+  /* ================= ABOUT / PROFIL ================= */
+  .about-section {
+    padding: 120px 0;
+    background-color: #f9fbff;
+    margin-top: -250px;
+    padding-top: 20px; /* atau kurang jika mau lebih mepet */
+    
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+  }
+
+  .about-box {
+    background-color: #f0f4f8;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease;
+  }
+
+  .about-box:hover {
+    transform: translateY(-10px);
+  }
+
+  .about-box h2 {
+    color: #2a5ea8;
+    margin-bottom: 15px;
+  }
+
+  .about-box p,
+  .about-box ul {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .about-box ul {
+    padding-left: 20px;
+  }
+
+  .about-box ul li {
+    list-style-type: disc;
+    margin-bottom: 10px;
+  }
+
+  /* ============ TEACHER SECTION ============ */
+  .teacher-section {
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .teacher-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin: 0 auto 40px;
+    max-width: 800px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+
+  .section-title p {
+    font-size: 16px;
+    color: #666;
+  }
+
+  .teacher-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+  }
+
+  .teacher-list li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+
+  /* ================= GALERI ================= */
+  .galeri {
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .galeri .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeri-section {
+    margin-top: -250px;
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .galeri-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .galeri-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .galeri-item {
+    width: 100%;
+    max-width: 500px;
+    height: 300px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .galeri-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .galeri-item img:hover {
+    transform: scale(1.05);
+  }
+
+  .galeri-item p {
+    padding: 10px;
+    font-weight: 500;
+  }
+
+  /* ============ MODAL ============ */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  #caption {
+    margin: 10px auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }
+
+  /* ================= FOOTER ================= */
+  footer {
+    margin-top: 15rem;
+    padding: 5rem 0;
+  }
+
+  footer a,
+  footer h2 {
+    color: #555;
+  }
+
+  footer h2 {
+    margin-bottom: 15px;
+  }
+
+  footer .container-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+  }
+
+  footer .informasi-kontak ul li a,
+  footer .socials ul li a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  footer .informasi-kontak ul li a i,
+  footer .socials ul li a i {
+    font-size: 20px;
+  }
+
+  footer .informasi-kontak ul li a span,
+  footer .socials ul li a span {
+    font-size: 13px;
+  }
+
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer .container {
+    margin-top: 100px;
+    justify-content: center;
+  }
+
+  footer .copyright {
+    font-size: 14px;
+  }
+
+  /* ================= RESPONSIVE ================= */
+  /* Tablet */
+  @media (max-width: 884px) {
+    .main-card {
+      padding-bottom: 60px; /* beri ruang tambahan */
+    }
+
+    .main-card .container {
+      align-items: center;
+      gap: 20px;
+    }
+
+    .main-card .card {
+      margin-top: 10px;
+      width: 80%;
+      margin-bottom: 2px; /* beri jarak antar card */
+    }
+
+    .sambutan {
+      padding-top: 5rem;
+    }
+
+    .sambutan .container {
+      flex-direction: column;
+    }
+
+    .sambutan .sambutan-about h2 {
+      text-align: center;
+    }
+  }
+
+  /* Tablet - Medium */
+  @media (max-width: 768px) {
+    .main-card {
+      padding-bottom: 60px; /* beri ruang tambahan */
+    }
+
+    .main-card .container {
+      align-items: center;
+      gap: 20px;
+    }
+
+    .main-card .card {
+      margin-top: 10px;
+      width: 80%;
+      margin-bottom: 2px; /* beri jarak antar card */
+    }
+    .sambutan .container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 2rem;
+    }
+
+    .sambutan-about {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 600px;
+      margin-left: 0;
+    }
+
+    .sambutan-about h1,
+    .sambutan-about p {
+      text-align: center;
+    }
+
+    .sambutan-about h1:after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  /* Mobile Phone */
+  @media (max-width: 576px) {
+    .main-card {
+      padding-bottom: 60px; /* beri ruang tambahan */
+    }
+
+    .main-card .container {
+      align-items: center;
+      gap: 20px;
+    }
+
+    .main-card .card {
+      margin-top: 10px;
+      width: 80%;
+      margin-bottom: 2px; /* beri jarak antar card */
+    }
+    
+    .sambutan {
+      padding-top: 33rem;
+    }
+
+    .sambutan .sambutan-img .thumbnail {
+      width: 90%;
+    }
+  }
+
+  /* Mini Mobile Phone */
+  @media (max-width: 320px) {
+
+  }
